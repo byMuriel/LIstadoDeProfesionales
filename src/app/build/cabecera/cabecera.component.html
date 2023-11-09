@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <!-- Logo o Nombre -->
+        <a class="navbar-brand" href="#">Mi Logo</a>
+
+        <!-- Botón Hamburguesa para pantallas pequeñas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Elementos del Navbar -->
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav justify-content-center col-md-9">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/']" routerLinkActive="active-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/portafolio']" routerLinkActive="active-link">Portafolio de
+                        Profesionales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/lo-ultimo']" routerLinkActive="active-link">Lo Último</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/contacto']" routerLinkActive="active-link">Contacto</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav col-md-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-search text-dark"></i> <!-- Ícono de lupa -->
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">UNETE A NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">INGRESA</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,43 @@
+<div class="container">
+    <br>
+    <a name="" id="" class="btn btn-primary" [routerLink]="['../agregar-profesional']" role="button">Agregar
+        Profesional</a>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Listado de profesionales</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let profesional of Profesionales;
+                            let iControl=index">
+                                <td scope="row">{{ profesional.id }}</td>
+                                <td>{{ profesional.nombre }}</td>
+                                <td>{{ profesional.correo }}</td>
+                                <td>
+                                    <a class="btn btn-light"
+                                        routerLink="/editar-profesional/{{ profesional.id }}">Editar</a>
+                                    |<!-- con el profesional.id borrara el dato de la bbdd y la api
+                                    y con el iControl borrara la fila de la lista-->
+                                    <a class="btn btn-danger" (click)="borrarRegistro(profesional.id,iControl)"
+                                        role="button">Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
